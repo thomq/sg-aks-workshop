@@ -12,7 +12,7 @@ The end result on the front-end should display what type of fruit image was proc
 
 Before we get into setting up the application, let's have a quick discussion on what container development looks like for the customer. No development environment is the same as it is not a one size fits all when it comes to doing development. Computers, OS, languages and IDEs to name a few things are hardly ever the same configuration/setup. And if you through the developer themselves in that mix it is definitely not the same.
 
-As a result, different users work in different ways. The following are just a few of the **innter devops loop** tools that we are seeing in this eco-system, feel free to try any of them out and let us know what you think. And if it hits the mark.
+As a result, different users work in different ways. The following are just a few of the **inner devops loop** tools that we are seeing in this eco-system, feel free to try any of them out and let us know what you think. And if it hits the mark.
 
 ### Tilt
 
@@ -242,7 +242,7 @@ k create secret generic fruit-secret \
   --from-literal=azurestorageaccountkey=<STORAGE_ACCOUNT_KEY> \
   -n dev
 # Check to see Worker Pod is now Running
-kubectl get deploy,rs,po,svc,ingress -n dev
+kubectl get deploy,rs,po,svc,ingress,secrets -n dev
 ```
 
 The end results will look something like this.
@@ -444,5 +444,5 @@ az network public-ip show -g $RG -n $AGPUBLICIP_NAME --query "ipAddress" -o tsv
 ## Key Links
 
 * [Tilt](https://github.com/windmilleng/tilt)
-* [Telepresence](https://telepresene.io)
+* [Telepresence](https://telepresence.io)
 * [Azure Dev Spaces](https://docs.microsoft.com/en-us/azure/dev-spaces/about)
